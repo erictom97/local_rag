@@ -99,7 +99,7 @@ Follow the steps in the [Using Docker](#using-docker) section to run the applica
 ## Example Usage
 
 After successfully launching the app, it should look like this:
-Screenshot 2024-07-28 at 5 40 29 PM
+![Screenshot 2024-07-28 at 5 40 29 PM](https://github.com/user-attachments/assets/12093069-82e8-42fa-b749-9b7814fe3268)
 
 ### Steps:
 
@@ -108,7 +108,7 @@ Screenshot 2024-07-28 at 5 40 29 PM
 3. Type your questions and click **Send**. The system will analyze the document and provide an answer.
 4. *Optional* - The voice feature enables the system to read the answer to you.
 
-Screenshot 2024-07-28 at 8 41 02 PM
+![Screenshot 2024-07-28 at 8 41 02 PM](https://github.com/user-attachments/assets/5e7fc43c-e3c7-4e76-8293-ff71cc12976d)
 
 ## Contributing
 
