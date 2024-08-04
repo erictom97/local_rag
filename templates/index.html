@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local RAG System</title>
+    <style>
+        .toggle-button {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .toggle-button input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Local RAG System</h1>
+    <div id="chat-container">
+        <div id="chat-messages"></div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <div id="file-upload">
+        <h2>Upload File</h2>
+        <input type="file" id="file-input">
+        <button onclick="uploadFile()">Upload</button>
+    </div>
+    <div id="voice-toggle">
+        <h2>Voice Feature</h2>
+        <label class="toggle-button">
+            <input type="checkbox" id="voice-checkbox" onchange="toggleVoice()" {% if voice_enabled %}checked{% endif %}>
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var input = document.getElementById('user-input');
+            var message = input.value;
+            input.value = '';
+            
+            fetch('/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({message: message}),
+            })
+            .then(response => response.json())
+            .then(data => {
+                var chatMessages = document.getElementById('chat-messages');
+                chatMessages.innerHTML += '<p><strong>You:</strong> ' + message + '</p>';
+                chatMessages.innerHTML += '<p><strong>AI:</strong> ' + data.response + '</p>';
+            });
+        }
+
+        function uploadFile() {
+            var fileInput = document.getElementById('file-input');
+            var file = fileInput.files[0];
+            var formData = new FormData();
+            formData.append('file', file);
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+            });
+        }
+
+        function toggleVoice() {
+            fetch('/toggle_voice', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Voice feature is now ' + (data.voice_enabled ? 'enabled' : 'disabled'));
+                document.getElementById('voice-checkbox').checked = data.voice_enabled;
+            });
+        }
+    </script>
+</body>
+</html>
