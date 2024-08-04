@@ -11,17 +11,18 @@ This repository contains the Local RAG System, built using Ollama (Llama2). Belo
 - [Running the Application](#running-the-application)
   - [Using Python Virtual Environment](#using-python-virtual-environment)
   - [Using Docker](#using-docker)
+- [Example Usage](#example-usage)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 
 ## About The Project
 
-The Local RAG System is designed to run an LLM locally and perform Retrieval Augmented Generation(RAG) on any documents which you upload using Ollama (Llama2).
+The Local RAG System is designed to run an LLM locally and perform Retrieval Augmented Generation (RAG) on any documents which you upload using Ollama (Llama2).
 
 ## Getting Started
 
-To get a local copy up and running, you can choose to run either by creating python virtual environment or as a docker image.
+To get a local copy up and running, you can choose to run either by creating a Python virtual environment or as a Docker image.
 
 ### Prerequisites
 
@@ -95,6 +96,20 @@ Follow the steps in the [Installation](#installation) section to set up and run 
 
 Follow the steps in the [Using Docker](#using-docker) section to run the application using Docker.
 
+## Example Usage
+
+After successfully launching the app, it should look like this:
+Screenshot 2024-07-28 at 5 40 29 PM
+
+### Steps:
+
+1. Click **Choose File** - choose a PDF file which you want to analyze.
+2. Click **Upload**.
+3. Type your questions and click **Send**. The system will analyze the document and provide an answer.
+4. *Optional* - The voice feature enables the system to read the answer to you.
+
+Screenshot 2024-07-28 at 8 41 02 PM
+
 ## Contributing
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -111,8 +126,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Eric Tom Mathews - https://www.linkedin.com/in/erictommathews/
+Eric Tom Mathews - [LinkedIn](https://www.linkedin.com/in/erictommathews/)
 
-Project Link: https://github.com/erictom97/local_rag.git
-
-
+Project Link: [https://github.com/erictom97/local_rag.git](https://github.com/erictom97/local_rag.git)
