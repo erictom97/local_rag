@@ -27,7 +27,7 @@ To get a local copy up and running, you can choose to run either by creating a P
 ### Prerequisites
 
 - Python 3.8 or higher
-- Docker
+- Ollama - https://ollama.com
 
 ### Installation
 
