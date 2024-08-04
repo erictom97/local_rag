@@ -17,11 +17,11 @@ This repository contains the Local RAG System, built using Ollama (Llama2). Belo
 
 ## About The Project
 
-The Local RAG System is designed to [describe the purpose and functionality of your project here]. It leverages the Ollama (Llama2) framework to [briefly describe what your project does].
+The Local RAG System is designed to run an LLM locally and perform Retrieval Augmented Generation(RAG) on any documents which you upload using Ollama (Llama2).
 
 ## Getting Started
 
-To get a local copy up and running, follow these steps.
+To get a local copy up and running, you can choose to run either by creating python virtual environment or as a docker image.
 
 ### Prerequisites
 
@@ -35,8 +35,8 @@ To get a local copy up and running, follow these steps.
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/your_username/local-rag-system.git
-    cd local-rag-system
+    git clone https://github.com/erictom97/local_rag.git
+    cd local_rag
     ```
 
 2. **Create a virtual environment:**
@@ -68,7 +68,7 @@ To get a local copy up and running, follow these steps.
 5. **Run the application:**
 
     ```sh
-    python main.py
+    python app.py
     ```
 
 #### Using Docker
@@ -111,16 +111,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
+Eric Tom Mathews - https://www.linkedin.com/in/erictommathews/
 
-Project Link: [https://github.com/your_username/local-rag-system](https://github.com/your_username/local-rag-system)
+Project Link: https://github.com/erictom97/local_rag.git
 
-Citations:
-[1] https://github.com/othneildrew/Best-README-Template
-[2] https://docs.python.org/zh-tw/3.12/library/venv.html
-[3] https://docs.docker.com/reference/cli/docker/image/pull/
-[4] https://docs.docker.com/engine/reference/run/
-[5] https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc
-[6] https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/
-[7] https://www.freecodecamp.org/news/python-requirementstxt-explained/
-[8] https://docs.docker.com/reference/cli/docker/container/run/
+
